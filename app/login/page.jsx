@@ -1,9 +1,11 @@
-import React from "react";
+import React from 'react';
 
 const Login = () => {
   return (
     <main>
-      <div>Login</div>;
+      <div>
+        <h2>Login</h2>
+      </div>
     </main>
   );
 };
