@@ -4,8 +4,9 @@
 
 /* base styles */
 body {
-  background: #f2f2eb;
-  @apply text-gray-500 m-8;
+  /* background: #f2f2eb; */
+
+  @apply text-gray-500 m-8 bg-neutral1;
 }
 h1,
 h2 {
@@ -68,8 +69,9 @@ button:disabled {
 /* form styles */
 form {
   @apply py-4 px-7 
-    bg-primary1 
-    bg-opacity-5 
+    shadow-sm
+    bg-neutral2 
+    /* bg-opacity-5  */
     rounded-md 
     block 
     mx-auto 
@@ -87,6 +89,10 @@ form select {
 }
 form button {
   @apply block mx-auto;
+}
+
+.pointer {
+  cursor: pointer;
 }
 
 /* feedback styles */

@@ -15,8 +15,10 @@ export default function Navbar() {
         <Link href="/">Home</Link>
         {status === 'authenticated' ? (
           <div className="flex gap-1">
-            <Link href="/dashboard">Dashboard</Link>
-            <Link href="/">Logout</Link>
+            <Link href="/dashboard/user">Dashboard</Link>
+            <a className="pointer" onClick={() => signOut({ callbackUrl: '/login' })}>
+              Logout
+            </a>
           </div>
         ) : (
           <div className="flex gap-1">

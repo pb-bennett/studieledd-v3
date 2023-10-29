@@ -7,6 +7,8 @@ module.exports = {
         primary1: '#202E44',
         primary2: '#A9BBC8',
         accent: '#8B734C',
+        neutral1: '#F2F2EB',
+        neutral2: '#C7BCAB',
       },
     },
   },
