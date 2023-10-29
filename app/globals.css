@@ -55,6 +55,9 @@ button {
 button:hover {
   @apply bg-opacity-90;
 }
+button:disabled {
+  @apply bg-opacity-30;
+}
 .btn-primary1 {
   @apply bg-primary1 text-white;
 }
