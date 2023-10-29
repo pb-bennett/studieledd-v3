@@ -22,7 +22,7 @@ p > a {
 }
 
 section {
-  @apply border-b-2 border-accent;
+  @apply border-b-2 border-accent pb-4 mb-4;
 }
 
 /* nav styles */
