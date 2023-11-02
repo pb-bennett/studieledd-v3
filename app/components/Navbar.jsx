@@ -10,18 +10,24 @@ export default function Navbar() {
   return (
     <div className="px-8">
       <nav>
-        <Image src={Logo} alt="StudieLedd logo" height={60} quality={100} />
-        <h1>StudieLedd</h1>
-        <Link href="/">Home</Link>
+        <div className="flex items-center gap-5">
+          <Link href="/">
+            <Image src={Logo} alt="StudieLedd logo" height={60} quality={100} />
+          </Link>
+          <Link href="/">
+            <h1>StudieLedd</h1>
+          </Link>
+          <Link href="/about">About</Link>
+        </div>
         {status === 'authenticated' ? (
-          <div className="flex gap-1">
-            <Link href="/dashboard/user">Dashboard</Link>
+          <div className="flex gap-5">
+            <Link href="/dashboard/user">{data.user.name}</Link>
             <a className="pointer" onClick={() => signOut({ callbackUrl: '/login' })}>
               Logout
             </a>
           </div>
         ) : (
-          <div className="flex gap-1">
+          <div className="flex gap-5">
             <Link href="/login">Login</Link>
             <Link href="/register">Register</Link>
           </div>
