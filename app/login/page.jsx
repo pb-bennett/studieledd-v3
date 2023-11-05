@@ -4,6 +4,8 @@ import toast from 'react-hot-toast';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { signIn } from 'next-auth/react';
 
+import EmailSignInForm from '../components/EmailSigninForm';
+
 export default function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -43,6 +45,7 @@ export default function Login() {
             {loading ? 'Please wait...' : 'Submit'}
           </button>
         </form>
+        <EmailSignInForm />
         <button className="btn-primary1" onClick={() => signIn('google', { callbackUrl })}>
           Sign in with Google
         </button>
