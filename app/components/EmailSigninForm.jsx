@@ -25,20 +25,19 @@ export default function EmailSignInForm() {
   const handleSubmit = async e => {
     e.preventDefault();
     try {
-      setLoading(true);
-
+      // setLoading(true);
       const formData = new FormData(e.target);
       const email = formData.get('email');
-      const response = await fetch(`http://localhost/api/login`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          email,
-        }),
-      });
-      // signIn('email', { email });
+      // const response = await fetch(`http://localhost/api/login`, {
+      //   method: 'POST',
+      //   headers: {
+      //     'Content-Type': 'application/json',
+      //   },
+      //   body: JSON.stringify({
+      //     email,
+      //   }),
+      // });
+      signIn('email', { email });
     } catch (err) {
       console.error(err);
       setLoading(false);
