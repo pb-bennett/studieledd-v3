@@ -14,8 +14,9 @@ export default function Register() {
   const handleSubmit = async e => {
     e.preventDefault();
     try {
+      // console.log('test:', process.env.API);
       setLoading(true);
-      const response = await fetch(`${process.env.API}/register`, {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API}/register`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

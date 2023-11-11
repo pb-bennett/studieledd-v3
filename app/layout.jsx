@@ -15,6 +15,7 @@ const rubik = Rubik({ subsets: ['latin'] });
 // };
 
 export default function RootLayout({ children }) {
+  console.log('APIURL:', process.env.API);
   return (
     <html lang="en">
       <body className={rubik.className}>
